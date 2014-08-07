@@ -1,0 +1,93 @@
+/*Reset general para todos los navergadores*/
+*{
+	margin: 0px;
+	padding: 0px;
+	color: #FFF;
+	text-decoration: none;
+	font-family: Arial;
+	font-weight: 1px;
+}
+body{
+	margin: 0px;
+	background: #252060
+}
+.general{
+	width: 80%;
+	min-width: 600px;
+	height: auto;
+	margin: 50px auto;
+}
+.general img{
+	width: 100%;
+}
+section.general p{
+	font-size: 2em
+}
+section.resultado{
+	position: relative;
+	top: 0px;
+	right: 0px;
+	width: 80%;
+	font-size: 2em;
+	text-decoration: none;
+	margin: auto;
+}
+
+.caja{
+	display: inline-block;
+	position: relative;
+	width: 15%;
+	margin-right: 2%;
+	cursor: pointer;
+}
+.caja img{
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	margin-right: 2%;
+	box-shadow: 0px 0px 100px rgba(255,255,255,0);
+	border-radius: 50%;
+	top: 0px;	
+	transition: top 0.3s, box-shadow 0.3s;
+	-webkit-transition: top 0.3s, box-shadow 0.3s;
+	-moz-transition: top 0.3s, box-shadow 0.3s;
+	-o-transition: top 0.3s, box-shadow 0.3s;
+	-transition: top 0.3s, box-shadow 0.3s;
+}
+.caja:hover img{
+	top: -20px;
+	box-shadow: 0px 0px 0px rgba(255,255,255,1);
+	
+}
+.caja p{
+	position: relative;
+	color: #fff;
+	opacity: 0.5;
+	text-align: center;
+	font-size: 100%;
+	top: 0px;
+	transition: top 0.3s, opacity 0.3s;
+	-webkit-transition: top 0.3s, opacity 0.3s;
+	-moz-transition: top 0.3s, opacity 0.3s;
+	-o-transition: top 0.3s, opacity 0.3s;
+
+}
+.caja:hover p{
+	top: -20px;
+	opacity: 0.3;
+}
+section.resultado{
+	width: 80%;
+	margin: auto;
+	text-align: center;
+
+}
+section.resultado img{
+	width: 15%;
+	border-radius:50%;
+}
+
+section.resultado span{
+	position: relative;
+	top: -55px;
+}

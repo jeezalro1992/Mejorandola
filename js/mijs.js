@@ -3,6 +3,8 @@ var ganar = 0;
 var perder = 0;
 var empate = 0;
 var ganador;
+var pasesU = 10;
+var pasesS =10;
 
 function aleatorio(minimo, maximo)
 {
@@ -14,15 +16,10 @@ function aleatorio(minimo, maximo)
 
 function ejecutar(opcionUsuario)
 {
-
+if ( pasesS > 0 && pasesU > 0)
+{
 
 	var opcionSistema = aleatorio(0,4);
-	
-	/*
-	
-	
-
-	*/
 	var valor = [ [2,3],[0,4],[1,3],[1,4],[0,2]];
 	var respuesta = "Perdiste!! jejeje... intentas de nuevo??";
 	
@@ -31,19 +28,23 @@ function ejecutar(opcionUsuario)
 		respuesta = "Empate!! estas mejorando... intentas de nuevo??";
 		if(empate>=0){
 			empate++;
+			pasesS--;
+			pasesU--;
 		}
 	}
-	else if(valor[opcionUsuario].indexOf(opcionSistema) > -1)
+	else if(valor[opcionUsuario].indexOf(opcionSistema) >=0)
 	{
 		respuesta = "Ganaste!! ¬¬ no te creas solo te estoy dando esperanza...";
 		if(ganar>=0){
 			ganar++;
+			pasesS--;
 		}
 
 	}
 	else{
 		if(perder>=0){
 			perder++;
+			pasesU--;
 		}
 	}
 
@@ -58,14 +59,29 @@ var contador= ganar-perder;
 	}
 	
 	
-
+	var oport ="Tus oportunidades: "+ pasesU +"<br> Oportinidades JavaScript: "+ pasesS;
 	var textc = "Contador";
 	var textcr = "Ganaste: "+ ganar+" Perdiste: "+perder+" Empate: "+ empate + "<br> "+ ganador;
+	document.getElementById('oportunidades').innerHTML=oport;
 	document.getElementById('contador').innerHTML = textc;
 	document.getElementById('conta').innerHTML = textcr;
 	resultado(opcionUsuario, opcionSistema, respuesta);
 }
 
+if(pasesS==0 ){
+	
+	document.getElementById('ganaste').style.display="block";
+}
+else if(pasesU==0){
+	
+	document.getElementById('perdiste').style.display="block";
+}
+if (pasesS==0 && pasesU == 0){
+	document.getElementById('empatados').style.display="block";
+}
+}
+
+ 
 function resultado(opcionUsuario, opcionSistema, respuesta)
 {
 

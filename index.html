@@ -1,103 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Juega Piedra, Papel, Tijera, Lagarto, Spock</title>
+		<link rel="stylesheet" type="text/css" href="css/estilo.css"/>
+		<script type="text/javascript" src="js/mijs.js"></script>
+	</head>
+	<body>
+		<header class="general">
+			<h1>Bienvenido al reto!!! Piedra, Papel, Tijera, Lagarto, Spock</h1>
+		</header>
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Mejorandola : Piedra Papel Tijera Lagarto Spock ">
+		<section class="general">
+			<p>Reglas del Juego</p>
+			<img src="img/pptls.jpg"/>
+		</section>
+		<section class="resultado">
+			<p id="resultadop"></p>
+			
+			<p id="text">Aun no has iniciado el Juego</p>
+			<p id="oportunidades">Tus oportunidades: 10<br>Oportinidades JavaScript: 10</p>
+			<div id="resultado"></div>
+			<p id="contador"></p>
+			
+			<p id="conta"></p>
+			
+		</section>
+		<section class="general">
+			<p>¿Que eliges?</p>
+			<nav>
+				<ul>
+					<li class="caja" onclick="ejecutar(0);"><img src="img/Piedra.png" > <p>Piedra</p></li>
+					<li class="caja" onclick="ejecutar(1);"><img src="img/Papel.png" > <p>Papel</p></li>
+					<li class="caja"onclick="ejecutar(2);" ><img src="img/Tijera.png" > <p>Tijera</p></li>
+					<li class="caja" onclick="ejecutar(3);"><img src="img/Lagarto.png" > <p>Lagarto</p></li>
+					<li class="caja" onclick="ejecutar(4);" ><img src="img/Spock.png" > <p>Spock</p></li>
+				</ul>
+			</nav>
+		</section>
+		<section id="ganaste" >
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+		<p>Felicidades Has Ganado!!!!!!!!!!!!!</p>
+		<a href="index.html">Juega de nuevo</a> 
+			
+		</section>
+		<section id="empatados" >
 
-    <title>Mejorandola</title>
-  </head>
+		<p>Buen Juego!!! hemos empatado</p>
+		<a href="index.html">Juega de nuevo???</a> 
+			
+		</section>
+		<section id="perdiste" >
 
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/jeezalro/Mejorandola">View on GitHub</a>
-
-          <h1 id="project_title">Mejorandola</h1>
-          <h2 id="project_tagline">Piedra Papel Tijera Lagarto Spock </h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/jeezalro/Mejorandola/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/jeezalro/Mejorandola/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <p>&lt;!DOCTYPE html&gt;
-
-    </p>
-        Juega Piedra, Papel, Tijera, Lagarto, Spock <h1>
-<a name="bienvenido-al-reto-piedra-papel-tijera-lagarto-spock" class="anchor" href="#bienvenido-al-reto-piedra-papel-tijera-lagarto-spock"><span class="octicon octicon-link"></span></a>Bienvenido al reto!!! Piedra, Papel, Tijera, Lagarto, Spock</h1>
-         <pre><code>    &lt;section class="general"&gt;
-        &lt;p&gt;Reglas del Juego&lt;/p&gt;
-        &lt;img src="img/pptls.jpg"/&gt;
-    &lt;/section&gt;
-    &lt;section class="resultado"&gt;
-        &lt;p id="resultadop"&gt;&lt;/p&gt;
-
-        &lt;p id="text"&gt;Aun no has iniciado el Juego&lt;/p&gt;
-        &lt;p id="oportunidades"&gt;Tus oportunidades: 10&lt;br&gt;Oportinidades JavaScript: 10&lt;/p&gt;
-        &lt;div id="resultado"&gt;&lt;/div&gt;
-        &lt;p id="contador"&gt;&lt;/p&gt;
-
-        &lt;p id="conta"&gt;&lt;/p&gt;
-
-    &lt;/section&gt;
-    &lt;section class="general"&gt;
-        &lt;p&gt;¿Que eliges?&lt;/p&gt;
-        &lt;nav&gt;
-            &lt;ul&gt;
-                &lt;li class="caja" onclick="ejecutar(0);"&gt;&lt;img src="img/Piedra.png" &gt; &lt;p&gt;Piedra&lt;/p&gt;&lt;/li&gt;
-                &lt;li class="caja" onclick="ejecutar(1);"&gt;&lt;img src="img/Papel.png" &gt; &lt;p&gt;Papel&lt;/p&gt;&lt;/li&gt;
-                &lt;li class="caja"onclick="ejecutar(2);" &gt;&lt;img src="img/Tijera.png" &gt; &lt;p&gt;Tijera&lt;/p&gt;&lt;/li&gt;
-                &lt;li class="caja" onclick="ejecutar(3);"&gt;&lt;img src="img/Lagarto.png" &gt; &lt;p&gt;Lagarto&lt;/p&gt;&lt;/li&gt;
-                &lt;li class="caja" onclick="ejecutar(4);" &gt;&lt;img src="img/Spock.png" &gt; &lt;p&gt;Spock&lt;/p&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/nav&gt;
-    &lt;/section&gt;
-    &lt;section id="ganaste" &gt;
-
-    &lt;p&gt;Felicidades Has Ganado!!!!!!!!!!!!!&lt;/p&gt;
-    &lt;a href="pptls.html"&gt;Juega de nuevo&lt;/a&gt; 
-
-    &lt;/section&gt;
-    &lt;section id="empatados" &gt;
-
-    &lt;p&gt;Buen Juego!!! hemos empatado&lt;/p&gt;
-    &lt;a href="pptls.html"&gt;Juega de nuevo???&lt;/a&gt; 
-
-    &lt;/section&gt;
-    &lt;section id="perdiste" &gt;
-
-    &lt;p&gt;Perdiste!!! jejej   no me sorprende...&lt;/p&gt;
-    &lt;a href="pptls.html"&gt;Revancha?&lt;/a&gt; 
-
-    &lt;/section&gt;
-    &lt;footer&gt; &lt;section class="general"&gt;&lt;p&gt;Creado por Jesus Lopez&lt;/p&gt;&lt;/section&gt;&lt;/footer&gt;
-&lt;/body&gt;
-</code></pre>
-
-<p></p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Mejorandola maintained by <a href="https://github.com/jeezalro">jeezalro</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
+		<p>Perdiste!!! jejej   no me sorprende...</p>
+		<a href="index.html">Revancha?</a> 
+			
+		</section>
+		<footer> <section class="general"><p>Creado por Jesus Lopez</p></section></footer>
+	</body>
 </html>
